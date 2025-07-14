@@ -49,3 +49,14 @@ GCC instalado
 python instalado
 
 **Linguagem**: Python <br>
+
+
+
+<div style="display: flex; overflow-x: auto; gap: 16px;">
+  <img src="image-1.png" width="250px" />
+  <img src="image-2.png" width="250px" />
+  <img src="image-3.png" width="250px" />
+  <img src="image-4.png" width="250px" />
+  <img src="image-5.png" width="250px" />
+</div>
+

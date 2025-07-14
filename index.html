@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Knapsack</title>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="text-center page-header">
+        <h1>Calculadora Knapsack</h1>
+        <h3><small>Dado um conjunto de itens, cada um com um peso e um valor, o <strong>algoritmo Knapsack</strong> determina a quantidade de cada item a ser incluída em uma coleção para que o peso total seja menor ou igual a um determinado limite e o valor total seja o maior possível. <br> Já no <strong>algoritmo Knapsack 0-1</strong>, os itens não podem ser divididos, o que significa que se deve pegar o item inteiro ou deixá-lo.</small></h3>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </div>
+                    <input class="form-control" id="capacity" type="number" placeholder="Capacidade da Mochila">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                    </div>
+                    <input class="form-control" id="rows" type="number" placeholder="Número de Itens" />
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="button" class="generateTable btn btn-primary" onclick="createTable();">Gerar Tabela</button>
+        </div>
+
+        <div class="table" id="wrapper"></div>
+
+        <div class="text-center">
+            <button type="button" class="generateResult btn btn-success" onclick="generateResult();">Calcular</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container text-center">
+        <div class="result">
+            <div class="resultContainer col-md-6">
+                <h1>Knapsack</h1>
+                <h4>Lucro Resultante</h4>
+                <h2 id="kpResultantProfit"></h2>
+                <h4>Densidade</h4>
+                <h2 id="kpProfitWeight"></h2>
+                <h4>Lucro</h4>
+                <h2 id="kpProfit"></h2>
+                <h4>Peso</h4>
+                <h2 id="kpWeight"></h2>
+                <h4>Solução Resultante</h4>
+                <h2 id="kpResultantSolution"></h2>
+            </div>
+
+            <div class="resultContainer col-md-6">
+                <h1>Knapsack 0-1</h1>
+                <h4>Tabela Resultante</h4>
+                <div id="knapsackTable"></div>
+                <h4>Lucro Resultante</h4>
+                <h2 id="kp01ResultantProfit"></h2>
+                <h4>Lucro</h4>
+                <h2 id="kp01Profit"></h2>
+                <h4>Peso</h4>
+                <h2 id="kp01Weight"></h2>
+                <h4>Solução Resultante</h4>
+                <h2 id="kp01ResultantSolution"></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
