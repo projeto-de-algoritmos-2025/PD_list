@@ -44,4 +44,6 @@ Este projeto é uma **Calculadora Knapsack** desenvolvida em HTML, CSS e JavaScr
 
 ## vídeo
 
+https://www.youtube.com/watch?v=oDRvA5trUcg
+
 
